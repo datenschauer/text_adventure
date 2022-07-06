@@ -14,7 +14,7 @@ Map = {
             """,
             "exits": {"s": "0,0,-1"},
             # weight: float, r_min: int, r_max: int, l_min: int, l_max: int
-            "item_gen": [90, 1, 2, 1, 1],
+            "item_gen": [90, 0, 1, 1, 1],
             "items": []
         },
     "0,0,-1":
@@ -30,7 +30,7 @@ Map = {
             """,
             "exits": {"n": "0,0,0", "o": "0,-1,-1", "w": "0,1,-1"},
             # weight: float, r_min: int, r_max: int, l_min: int, l_max: int
-            "item_gen": [90, 1, 2, 1, 1],
+            "item_gen": [90, 0, 1, 1, 1],
             "items": []
         }
 }

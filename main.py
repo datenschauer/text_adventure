@@ -30,7 +30,7 @@ def init_save_game() -> Game:
     save_game_path = Path.cwd() / "save_games"
 
     if any(save_game_path.iterdir()):
-        match input("Spielstand vorhanden! Möchtest du einen laden?\n>> ").lower():
+        match input("\nSpielstand vorhanden! Möchtest du einen laden?\n>> ").lower():
             case "ja" | "j":
                 savegames = [file for file in save_game_path.iterdir()]
                 for i in range(len(savegames)):

@@ -11,7 +11,7 @@ class Room:
         self.exits = exits
         self.items = []
         if len(items) > 0:
-            self.items = [create_item(item) for item in items]
+            self.items = [create_item(item, int(item.split("-")[1])) for item in items]
 
         print(self.get_desc())
         print(self.__str__())

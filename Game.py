@@ -74,10 +74,9 @@ class Game:
                     try:
                         choice = int(input("\nMöchtest du eines davon nehmen? Gib die Nummer ein:\n>> "))
                         self.player.add_item(self.current_room.get_items()[choice])
-                        if self.world[self.coord]["items"][2] > 0:
-                            self.world[self.coord]["items"][2] -= 1  # reduce max quantity of items in current room
+                        print(f"Du hast {self.current_room.get_items()[choice]} genommen.")
                         self.current_room.delete_item(self.current_room.get_items()[choice])
-                        
+
                     except ValueError:
                         pass
 
@@ -122,6 +121,7 @@ class Game:
                     save_game(input(">> Gib einen Namen für den Spielstand ein: "))
                 else:
                     save_game(self.save_game_name, self.world)
+                    print(f"In {self.save_game_name} gespeichert!")
 
             case ["spiel", "beenden"] | ["beenden"] | ["ende"]:
                 quit_game()
